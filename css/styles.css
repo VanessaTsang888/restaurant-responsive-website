@@ -52,3 +52,22 @@ body {
   font-weight: 400;
   color: #555;
 }
+
+html {
+  /* font-size: 10px; */
+  /*  Respect user's font-size setting:
+  % for usability when user need to change font-size in browser. 10px / 16px = 0.625 = 62.5% -> The user's browser font-size setting. */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+/* max-width: f the container width is less than the specified max width, then the width of the elementwill be 100% of the container element width. */
+.test {
+  background-color: red;
+  padding: 4rem;
+  /* max-width: 1000px; */
+  max-width: 50rem;
+  font-size: 2rem;
+  color: white;
+  /* 1 rem = 16px -> 16 x 50rem = 800px  */
+}
