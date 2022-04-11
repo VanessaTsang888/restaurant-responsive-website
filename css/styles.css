@@ -46,6 +46,13 @@ Customers: uifaces.co -> https://www.uifaces.co/browse-avatars/
   box-sizing: border-box;
 }
 
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /*  Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1;
@@ -53,21 +60,15 @@ body {
   color: #555;
 }
 
-html {
-  /* font-size: 10px; */
-  /*  Respect user's font-size setting:
-  % for usability when user need to change font-size in browser. 10px / 16px = 0.625 = 62.5% -> The user's browser font-size setting. */
-  /* Percentage of user's browser font-size setting */
-  font-size: 62.5%;
+.hero {
+  /* when the element is larger than the container, it will occupy 100% of it. */
+  max-width: 130rem;
+  /* center it inside the viewport. */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-/* max-width: f the container width is less than the specified max width, then the width of the elementwill be 100% of the container element width. */
-.test {
-  background-color: red;
-  padding: 4rem;
-  /* max-width: 1000px; */
-  max-width: 50rem;
-  font-size: 2rem;
-  color: white;
-  /* 1 rem = 16px -> 16 x 50rem = 800px  */
+.hero-img {
+  width: 100%;
 }
