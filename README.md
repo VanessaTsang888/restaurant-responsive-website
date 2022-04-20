@@ -19,6 +19,11 @@ Before I became a Frontend UI Software Engineer I was working as a responsive we
 
 Around this personal project I am working on a couple of Udemy training course which are more based on UI Development using Javascript framework/library - React.js (with TypeScript), Vue.js with Vuex. As a FE Software Engineer it is important for me to keep upskilling in my UI Development skills and keep up with the technologies within software engineering as much as possible.
 
+### Test on UI
+
+Use GoLive within VSCode and port: http://127.0.0.1:5500/index.html
+You can view or test the website using port 5500.
+
 #### Tools
 
 For the IDE I am using VSCode and various plugins.

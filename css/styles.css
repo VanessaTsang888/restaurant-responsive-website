@@ -17,11 +17,12 @@ Line heights:
 ---- 02 COLOURS
 
 - Primary: #e67e22
-- Tints:
+- Tints: #fae5d3
 - Shades:
 - Accents:
 - Greys:
 #555
+#333
 
 --- 05 SHADOWS
 
@@ -60,6 +61,18 @@ body {
   color: #555;
 }
 
+/*
+ 
+https://maketintsandshades.com/#e67e22 
+with background-color always need alot of padding top & bottom
+
+*/
+
+.section-hero {
+  background-color: #fae5d3;
+  padding: 9.6rem 0;
+}
+
 .hero {
   /* when the element is larger than the container, it will occupy 100% of it. */
   max-width: 130rem;
@@ -67,8 +80,73 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 9.6rem; /* gap beween columns */
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+/* padding: line object -> top & bottom then left & right. The transition will transition between 2 different state */
+
+/* Simple CSS animation on btn on hover so it don't jump from one color to another. */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: #e67e22;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  border-radius: 1rem;
+
+  /* We always put transition on original "state" */
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: white;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: white;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  /* border: 3px solid #fff */
+  /* Trick to add border inside. The inset keyword will add shadow inside of element */
+  box-shadow: inset 0 0 0 3px #fff;
 }
 
 .hero-img {
   width: 100%;
+}
+
+/* !important : This declaration will always have the highest priority. This can be used on any elements not just the buttons. */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
 }
