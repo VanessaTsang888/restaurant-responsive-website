@@ -55,6 +55,7 @@ html {
 }
 
 body {
+  font-family: 'Rubik', sans-serif;
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
@@ -86,7 +87,7 @@ with background-color always need alot of padding top & bottom
 
 .heading-primary {
   font-size: 5.2rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.05;
   color: #333;
   letter-spacing: -0.5px;
@@ -149,4 +150,46 @@ with background-color always need alot of padding top & bottom
 /* !important : This declaration will always have the highest priority. This can be used on any elements not just the buttons. */
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+/* Layout imgs side-by-side with the text using flex not grid as we don't care about the size of columns as let the content determin that. */
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+/* Format imgs should be flex images. */
+.delivered-imgs {
+  display: flex;
+}
+
+/* use the decentant selector to select the images <img /> */
+/* Overlap imgs ontop of each other and with a border that is same color as the background-color. use 'gap' for spacing.  */
+/*   This will pull imgs 16px to the left: margin-right: -1.6rem; */
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+/* use last child sudo class to select the last img to change the style of that img only - set back to 0 */
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* span: Use a decentant selector rather than another class */
+/* Make sure the text color has contrast with the background-color using: https://coolors.co/ -> contrast-checker -> past our color */
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
