@@ -9,15 +9,21 @@ Design Settings:
 
 - Font weights:
 Default: 400.
+Medium: 500
+Semini bold: 600
+Bold: 700
 
-Line heights:
-- Defualt: 1.
+
+- Line heights:
+Defualt: 1.
+Small: 1.05
+Paragraph default: 1.6
 
 
 ---- 02 COLOURS
 
 - Primary: #e67e22
-- Tints: #fae5d3
+- Tints: #fae5d3 #fdf2e9;
 - Shades:
 - Accents:
 - Greys:
@@ -27,6 +33,8 @@ Line heights:
 --- 05 SHADOWS
 
 --- 06 BORDER-RADIOUS
+
+Defualt: 9px
 
 --- 07 WHITE SPACES
 - SPACING SYSTEM (px)
@@ -144,6 +152,46 @@ body {
 }
 
 /***********************************************************************/
+/* NAVIGATION */
+/***********************************************************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.8rem;
+  /* Use transition property to create animations between different values for a certain property. Animate for all properties for 0.3 seconds */
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+/* Style both the main nav link and the nav cta classes. Allways use px for 'border-radius' as don't want this to change.  */
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: white;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/***********************************************************************/
 /* HERO SECTION */
 /***********************************************************************/
 
@@ -155,7 +203,7 @@ with background-color always need alot of padding top & bottom
 */
 
 .section-hero {
-  background-color: #fae5d3;
+  background-color: #fdf2e9;
   padding: 4.8rem 0 9.6rem 0;
 }
 
