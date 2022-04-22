@@ -190,7 +190,7 @@ with background-color always need alot of padding top & bottom
   z-index: -2;
 }
 
-/* Another sudo element */
+/* Another sudo element. Cannot use before again so use after */
 
 .step-img-box::after {
   width: 45%;
