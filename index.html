@@ -23,6 +23,9 @@ HTML5 elements:
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
+        <!-- Inject the SVG of archive icon: ionic.io/ionicons  -->
+        <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+
     <title>OmniFood</title>
   </head>
   <body>
@@ -107,11 +110,11 @@ HTML5 elements:
           <h2 class="heading-secondary">
             Your daily dose of health in 3 simple steps
           </h2>
-
+        </div>
           <!-- Add container grid with 2 cols here -->
-          <div class="containe grid grid--2-cols grid--center-v">
+          <div class="container grid grid--2-cols grid--center-v">
             <!-- STEP 01  -->
-            <div class="step-test-box">
+            <div class="step-text-box">
               <p class="step-number">01</p>
               <h3 class="heading-tertiary">
                 Tell us what you like (and what not)
@@ -169,9 +172,40 @@ HTML5 elements:
               />
             </div>
           </div>
+      </section>
+      <!-- Meals Section -->
+      <section class="section-meals">
+        <div class="container">
+          <span class="subheading">Simple Meals</span>
+          <h2 class="heading-secondary">
+            Omnifood AI chooses from 5,000+ recipes
+          </h2>
+
+          <div class="container grid grid--3-cols">
+            <!-- meals -->
+            <div class="meal">
+              <img src="img/meals/meal-1.jpg" class="meal-img" alt="Japanese Gyozas" />
+              <span class="tag">Vegetarian</span>
+              <p class="meal-title">Japanese Gyozas</p>
+              <ul class="meal-attributes">
+                <!-- Fire icon created by https://ionic.io/ionicons -->
+                <li class="meal-attribute">
+                  <ion-icon name="flame-outline"></ion-icon>
+                  <span>650 Calories</span>
+                </li>
+                <!-- The registered symbol -->
+                <li class="meal-attribute"><ion-icon name="restaurant-outline"></ion-icon><span>
+                   NutriScore &reg; 74</span></li>
+                <li class="meal-attribute"><ion-icon name="star-outline"></ion-icon>
+                  <span>4.9 rating (537)</span></li>
+              </ul>
+            </div>
+
+            <div class="meal">Meals</div>
+            <div class="meal">List of Diets</div>
+          </div>
         </div>
 
-        <!-- </div> -->
       </section>
     </main>
   </body>
