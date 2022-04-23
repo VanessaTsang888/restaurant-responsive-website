@@ -139,6 +139,36 @@ with background-color always need alot of padding top & bottom
 }
 
 /***********************************************************************/
+/* FEATURED IN SECTION */
+/***********************************************************************/
+
+/* Less padding on the bottom */
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 600rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #666;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+/* Make img from full color to gray. */
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 65%;
+}
+
+/***********************************************************************/
 /* HOW IT WORKS SECTION */
 /***********************************************************************/
 
