@@ -42,6 +42,7 @@ Paragraph default: 1.6
 --- 06 BORDER-RADIOUS
 
 Defualt: 9px
+Medium: 11px
 
 --- 07 WHITE SPACES
 - SPACING SYSTEM (px)
@@ -165,7 +166,8 @@ body {
   border-radius: 1rem;
 
   /* We always put transition on original "state" */
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
 }
 
 .btn--full:link,
@@ -193,7 +195,39 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  /* The currentColor keyword will take the current text color as the border-bottom. Since using padding, need to set to inline-block.  */
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transform: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  /* The border-bottom of 1px will disapear on hover */
+  border-bottom: 1px solid transparent;
+}
+/* HELPER/SETTINGS CLASSES  */
+
 /* Helper class. !important : This declaration will always have the highest priority. This can be used on any elements not just the buttons. */
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+/* helper class */
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.strong {
+  font-weight: 500;
 }

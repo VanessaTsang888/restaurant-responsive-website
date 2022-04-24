@@ -3,8 +3,12 @@ IMPORTANT NOTES:
 In general, you should only have one h1 per page, and that h1 should succintly represent the content on that page.
 
 CSS:
-Use the class name of the container to style in css.
+Use the class name of the html container to format/layout and style in css.
 Using classes in HTML to select everything to layout and style in CSS.
+
+HTML + CSS:
+Create resuable components, ie. <h3 class="heading-tertiary">Works with any diet:</h3>
+This class is used in multiple sections.
 
 Span <span></span> is a generic text element.
 Div <div></div> is just a container without any semanic meaning.
@@ -30,5 +34,6 @@ IMAGES:
 Even for images, use flexbox in css file.
 
 SYMBOLS:
+
 <!-- The registered symbol -->
 <li class="meal-attribute">NutriScore &reg; 74</li>
