@@ -166,7 +166,7 @@ body {
   border-radius: 1rem;
 
   /* We always put transition on original "state" */
-  /* transition: background-color 0.3s; */
+  /* transition all properties not just the bg colour so it looks more fluid */
   transition: all 0.3s;
 }
 
