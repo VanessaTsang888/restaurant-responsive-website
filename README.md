@@ -45,6 +45,10 @@ For the IDE I am using the VSCode as this is one of the best tool for the job. I
 - Live Server
 - Prettier - Code formatter
 
+#### Colour Contrast Checker Tool
+
+Check that the text colour meets the 'colour constrast ratio' on the digital accessibility guidelines: [WCAG 2.1 - Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html). To do this use the [contrast check tool](https://webaim.org/resources/contrastchecker/) as the WCAG guidelines has suggested.
+
 ## How To Run This Website
 
 Click the 'GoLive' feature located on the botton-right of your VSCode IDE. This will run the website application in Google Chrome browser. Then you will be able to navigate around the website as expected.
@@ -52,5 +56,3 @@ Click the 'GoLive' feature located on the botton-right of your VSCode IDE. This 
 ## Hosting - Live On The World Wide Web
 
 Once I have completed my Omnfood website, I will host it on the World Wide Web (www.) and post the live URL on here. You will be able to use the URL to navigate around the whole website and use the contact details to leave me with your feedback and comments if you have any to share with me.
-
--
