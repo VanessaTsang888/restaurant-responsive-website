@@ -20,3 +20,18 @@ Align a grid item inside of a rid cell because the plan Starter is aligned left 
 At the moment the two pricing tables look the same but we want user to select the Complete plan as that one make the company more money. Therefore, we can state that one is best value to make that one stand out more. To do this we use CSS to highlight this point.
 
 ### Add ribbon flash to Complete Plan
+
+Location: top-right corner.
+Code - CSS:
+
+- Build the content, layout (i.e. on an angle) and styles.
+- Use pseudo element.
+- To layout the ribbon on an angle we use percentages as the unit for flexible layout.
+- inspect the UI and change the css code temporary to get the values right before commiting the change on the styles.css file.
+- To cut-off the end parts we use the `overflow` property with value of `hide` but on the parent element which is `princing-plan--complete`:
+
+```css
+.princing-plan--complete {
+  overflow: hidden;
+}
+```

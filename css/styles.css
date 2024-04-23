@@ -444,6 +444,22 @@ with background-color always need alot of padding top & bottom
   overflow: hidden;
 }
 
+/* The content, layout and styles to build a Ribbon Flash */
+.princing-plan--complete::after {
+  content: 'Best Value';
+  position: absolute;
+  top: 6%;
+  right: -18%;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
 /* Container for price info */
 .plan-header {
   text-align: center;
