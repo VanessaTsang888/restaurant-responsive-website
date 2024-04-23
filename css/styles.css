@@ -532,3 +532,40 @@ with background-color always need alot of padding top & bottom
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
+/*******************************/
+/* CTA SECTION */
+/******************************/
+
+.section-cta {
+  /* top / right / bottom / left */
+  /* padding: 9.6rem 0 12.8rem 0; */
+
+  /* top / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  /* Fix the img overlapping the cta element. */
+  overflow: hidden;
+  /* temp */
+  height: 50rem;
+}
+
+/* Background image: to visually set the image back we use colours to layover the image. */
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url('../img/eating.jpg');
+  background-size: cover;
+  background-position: center;
+}
