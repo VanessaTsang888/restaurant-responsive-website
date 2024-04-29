@@ -529,7 +529,55 @@ HTML5 elements:
       <section class="section-cta">
         <div class="container">
           <div class="cta">
-            <div class="cta-text-box">CTA</div>
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Get your first meal for free!</h2>
+              <p class="cta-text">
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
+<!-- Form elements: labels and inputs are by default inline elements so they sit side by side. -->
+        <form class="cta-form" action="#">
+          <div>
+            <label for="full-name">Full Name</label>
+              <input
+                id="full-name"
+                type="text"
+                placeholder="Your name"
+                required
+                />
+          </div>
+<!-- for placeholder use email format -->
+          <div>
+            <label for="email">Email address</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="me@example.com"
+                required
+                />
+          </div>
+<!-- First option has empty value as user can't submit form with that option still selected. -->
+          <div>
+            <label for="select-where">Where did you hear from us?</label>
+              <select id="select-where" required>
+                <option value="">Please choose one option:</option>
+                <option value="friends">Friends and family</option>
+                <option value="youtube">YouTube video</option>
+                <option value="podcast">Podcast</option>
+                <option value="ad">Facebook ad</option>
+                <option value="others">Others</option>
+              </select>
+          </div>
+
+        <button class="btn btn--form">Sign up now</button>
+
+                <!-- <input type="checkbox" />
+                <input type="number" /> -->
+      </form>
+<!-- End of form elements -->
+
+            </div>
               <!-- The content is in css not html so for screen readers we need the html role and the aria-label properties -->
               <div
                 class="cta-img-box"
@@ -539,9 +587,6 @@ HTML5 elements:
           </div>
         </div>
       </section>
-
-
-
 <!-- End of CTA Part 1 -->
 
 
