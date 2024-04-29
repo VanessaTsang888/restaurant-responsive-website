@@ -50,6 +50,7 @@
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
   color: white;
+  letter-spacing: 0.08rem;
   background-color: #e67e22;
 }
 
@@ -607,7 +608,81 @@ with background-color always need alot of padding top & bottom
 /* FOOTER */
 /**************************/
 
+/* Create a suttle line from left to right and above the footer to separate this section from the above CTA section */
 .footer {
   padding: 12.8rem 0;
   border-top: 1px solid #eee;
+}
+
+/* Make the first 2 columns bigger than the last 3 columns. */
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+/* To make icons layout side-by-side use the display property with the flex value. */
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+/* The margin top with auto value is a flexbox trick that we can use as the logo-col class above has been defined with display block and margin-bottom */
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+/* Define the display as flex, and the flex direction as column so we can add the gap that will between each column. */
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+/* Style the hover and the active states */
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
