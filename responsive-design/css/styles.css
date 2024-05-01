@@ -1,0 +1,688 @@
+/***********************************************************************/
+/* HEADER */
+/***********************************************************************/
+
+/* Use layout and visual styles of logo. Use flexbox where header is flex container.  */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  /* fixed height as we want header to be sticky later. */
+  height: 9.6rem;
+  /* padding top & bottom, left & right. */
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/***********************************************************************/
+/* NAVIGATION */
+/***********************************************************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.8rem;
+  /* Use transition property to create animations between different values for a certain property. Animate for all properties for 0.3 seconds */
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+/* Style both the main nav link and the nav cta classes. Allways use px for 'border-radius' as don't want this to change.  */
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: white;
+  letter-spacing: 0.08rem;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/***********************************************************************/
+/* HERO SECTION */
+/***********************************************************************/
+
+/*
+ 
+https://maketintsandshades.com/#e67e22 
+with background-color always need alot of padding top & bottom
+
+*/
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+  /* when the element is larger than the container, it will occupy 100% of it. */
+  max-width: 130rem;
+  /* center it inside the viewport. */
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem; /* gap beween columns */
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+/* Layout imgs side-by-side with the text using flex not grid as we don't care about the size of columns as let the content determin that. */
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+/* Format imgs should be flex images. */
+.delivered-imgs {
+  display: flex;
+}
+
+/* use the decentant selector to select the images <img /> */
+/* Overlap imgs ontop of each other and with a border that is same color as the background-color. use 'gap' for spacing.  */
+/*   This will pull imgs 16px to the left: margin-right: -1.6rem; */
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+/* use last child sudo class to select the last img to change the style of that img only - set back to 0 */
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* span: Use a decentant selector rather than another class */
+/* Make sure the text color has contrast with the background-color using: https://coolors.co/ -> contrast-checker -> past our color */
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+/***********************************************************************/
+/* FEATURED IN SECTION */
+/***********************************************************************/
+
+/* Less padding on the bottom */
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 600rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #666;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+/* Make img from full color to gray. */
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 65%;
+}
+
+/***********************************************************************/
+/* HOW IT WORKS SECTION */
+/***********************************************************************/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+/* To center img vertically and horizontally use flexbox and align-item: center */
+.step-img-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  /* Circle to occupy same space as img: using absolute positioning instead of flexbox. Transform circle to its -50% of its own width and -50% of its own height */
+  /* Use css property Z Index to move circle behind img. */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Circle behind iPhone img due to dead space between text and img. Use % as we want this to be flexible. */
+.step-img-box::before {
+  width: 60%;
+  /* height: 60%  */
+
+  /* 60% of parent's width */
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+/* Another sudo element. Cannot use before again so use after */
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 50%;
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
+.step-img {
+  width: 35%;
+  /* z-index: 10; */
+}
+
+/***********************************************************************/
+/* MEALS SECTION */
+/***********************************************************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+/* Vertical shadow 2.4, blur 4.8 rgba for transparancy - 0.075 for 7.5% */
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.085);
+  border-radius: 11px;
+  /* padding: 4.8rem; */
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+/* Move img up on hover - the y-axis. First figure is for horizonal(x) movement, second is for vertical(y) movement. */
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+  padding: 4.8rem;
+  padding-top: 3.2rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* i.e. Vegetarian */
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: #51cf66;
+  color: #333;
+  border-radius: 100px;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.tag--Vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--Vegan {
+  background-color: #94d82d;
+}
+
+.tag--Paleo {
+  background-color: #ffd43b;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  /* justify-content aligns items vertically, not longer horizontally. */
+  flex-direction: column;
+  gap: 2rem;
+}
+/* Use flexbox to align icons with text vertically. */
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* Could use font-size to change size of icons instead of height and width. */
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/***********************************************************************/
+/* TESTIMONIALS SECTION */
+/***********************************************************************/
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+/* Line height will multiply by 1.8 so no need for the unit of rem at the end. */
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+/* Lighter colour as less important to the testimonial text, but need to come back to check the colour contrast later to pass accessibility guidelines */
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+/* Our own custom grid as not using our pre-definded grid. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+/* To remove default spaces, set the default inline element to block level element. */
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/**************************/
+/* PRICING SECTION */
+/**************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.princing-plan {
+  border-radius: 11px;
+
+  width: 75%;
+}
+
+/* Align the starter plan to the right to remove the space to the right. A little less padding to visually with the Complete Plan. */
+.princing-plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+}
+
+/* Make this plan stand out from the Starter plan to make the company more money. */
+.princing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The content, layout and styles to build a Ribbon Flash */
+.princing-plan--complete::after {
+  content: 'Best Value';
+  position: absolute;
+  top: 6%;
+  right: -18%;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
+/* Container for price info */
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+/* The supporting text for the price. */
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+  letter-spacing: 0.1rem;
+}
+
+/*******************************/
+/* PRICING SECTION - Features */
+/******************************/
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #fdf2e9;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/*******************************/
+/* CTA SECTION */
+/******************************/
+
+.section-cta {
+  /* top / right / bottom / left */
+  /* padding: 9.6rem 0 12.8rem 0; */
+
+  /* top / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  /* Fix the img overlapping the cta element. */
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+/* Inside of the cta class is the heading-secondary class. That is the class we are styling here */
+.cta .heading-secondary {
+  /* color: #45260a; */
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+/* Background image: to visually set the image back we use colours to layover the image. */
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url('../img/eating.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Light colour text inside of input element */
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+/* Accessibility: on focus state on tab -> assistive technology: user's with reduced eyesight. */
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgb(253, 242, 233, 0.5);
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+/* Create a suttle line from left to right and above the footer to separate this section from the above CTA section */
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+/* Make the first 2 columns bigger than the last 3 columns. */
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+/* To make icons layout side-by-side use the display property with the flex value. */
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+/* The margin top with auto value is a flexbox trick that we can use as the logo-col class above has been defined with display block and margin-bottom */
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+/* Define the display as flex, and the flex direction as column so we can add the gap that will between each column. */
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+/* Style the hover and the active states */
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
