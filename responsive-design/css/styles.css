@@ -12,6 +12,7 @@
   height: 9.6rem;
   /* padding top & bottom, left & right. */
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -44,6 +45,26 @@
 .main-nav-link:active {
   color: #cf711f;
 }
+
+/* MOBILE NAVIGATION */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  /* By default turn off this btn or make it hidden. */
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name='close-outline'] {
+  display: none;
+}
+
 /* Style both the main nav link and the nav cta classes. Allways use px for 'border-radius' as don't want this to change.  */
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited {
