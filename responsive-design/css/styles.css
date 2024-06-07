@@ -425,21 +425,21 @@ with background-color always need alot of padding top & bottom
   padding: 9.6rem 0;
 }
 
-.princing-plan {
+.pricing-plan {
   border-radius: 11px;
 
   width: 75%;
 }
 
 /* Align the starter plan to the right to remove the space to the right. A little less padding to visually with the Complete Plan. */
-.princing-plan--starter {
+.pricing-plan--starter {
   justify-self: end;
   border: 2px solid #fdf2e9;
   padding: 4.6rem;
 }
 
 /* Make this plan stand out from the Starter plan to make the company more money. */
-.princing-plan--complete {
+.pricing-plan--complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
@@ -447,7 +447,7 @@ with background-color always need alot of padding top & bottom
 }
 
 /* The content, layout and styles to build a Ribbon Flash */
-.princing-plan--complete::after {
+.pricing-plan--complete::after {
   content: 'Best Value';
   position: absolute;
   top: 6%;

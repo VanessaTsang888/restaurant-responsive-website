@@ -177,3 +177,42 @@ Instead, 1rem = 1em = 16px. */
     font-size: 3rem;
   }
 }
+
+/*************************************/
+/* BELOW 702px (Smaller Tablets) */
+/************************************/
+
+/* Convert 700 to em: 700/16 = 43.75 -> round off to: 44em */
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* diet list: should span from 1 to the end which is -1.
+  Justify-self prop for the horizonal alignment, self is to set this now on individual grid item and not on the grid container. 
+  Center between the 2 cols. */
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+  .pricing-plan {
+    width: 100%;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  /* For these 2 classes, span over 3 cols */
+  .logo-col, .address-col {
+    grid-column: span 3;
+  }
+  /* layout the last 2 cols above the first 2 cols. */
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+  
+}
