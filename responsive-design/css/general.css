@@ -66,7 +66,7 @@ Customers: uifaces.co -> https://www.uifaces.co/browse-avatars/
 html {
   /* font-size: 10px; */
   /* 10px / 16px = 0.625 = 62.5% */
-  /*  Percentage of user's browser font-size setting */
+  /*  Percentage of user's browser font-size setting. We dont want to be able to scroll in the 'X' direction. */
   font-size: 62.5%;
   overflow-x: hidden;
 }
@@ -78,7 +78,8 @@ body {
   font-weight: 400;
   color: #555;
 
-  /* Only works if there is nothing absolutely positioned in relation to body */
+  /* Only works if there is nothing absolutely positioned in relation to body.
+  We dont want to be able to scroll in the 'X' direction */
   overflow-x: hidden;
 }
 

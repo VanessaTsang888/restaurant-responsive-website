@@ -122,7 +122,9 @@ Instead, 1rem = 1em = 16px. */
   .btn-mobile-nav {
     display: block;
   }
-
+  /* Use transition property and the translateX func to create animation: 
+  Move whole nav to the right - horizontally hence we use the x-axis. 
+  Move it out of the screen completely by exactly its own width - value 100%. */
   .main-nav {
     background-color: rgba(255, 255, 255, 0.97);
     position: absolute;
@@ -130,9 +132,9 @@ Instead, 1rem = 1em = 16px. */
     left: 0;
     width: 100%;
     height: 100vh;
-    /* Use transition to create animation: Move whole nav to the right  */
+    /* Use translate func to move nav to the right */
     transform: translateX(100%);
-
+/* value for transition prop: which property we want to animate, the duration, then the type of the animation  */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +153,6 @@ Instead, 1rem = 1em = 16px. */
     /* 3) Hide it from screen readers */
     visibility: hidden;
   }
-
   .nav-open .main-nav {
     opacity: 1;
     pointer-events: auto;
