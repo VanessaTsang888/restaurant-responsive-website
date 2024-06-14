@@ -26,8 +26,11 @@ HTML5 elements:
     <!-- <link rel="stylesheet" href="css/queries.css" /> -->
     <link rel="stylesheet" href="./css/queries.css" />
 
-        <!-- Inject the SVG of archive icon: ionic.io/ionicons  -->
-        <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <!-- Inject the SVG of archive icon: ionic.io/ionicons  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <!-- Link up the JavaScript file: script.js -->
+    <script defer src="js/script.js"></script>
 
     <title>OmniFood</title>
   </head>
@@ -616,9 +619,9 @@ HTML5 elements:
               <a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a>
             </li>
           </ul>
-
+<!-- Use JavaScript to keep the date updated -->
           <p class="copyright">
-            Copyright &copy; 2027 by Omnifood, Inc. All rights reserved.
+            Copyright &copy; <span class="year">2024</span> by Omnifood, Inc. All rights reserved.
           </p>
         </div>
         <div class="address-col">
