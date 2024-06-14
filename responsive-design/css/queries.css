@@ -76,6 +76,7 @@ Instead, 1rem = 1em = 16px. */
     padding: 0 8rem;
     gap: 6.4rem;
   }
+
   .hero-text-box,
   .hero-img-box {
     text-align: center;
@@ -214,5 +215,92 @@ Instead, 1rem = 1em = 16px. */
     grid-column: span 2;
     margin-bottom: 3.2rem;
   }
+}
+
+/*************************************/
+/* BELOW 544px (Phones) 
+  550/16 = 34,375 # round off to 34em.
+  34*16 = 544px */
+/************************************/
+/************************************************************* 
+Now we don't have enough space for multiple cols so will relayout 
+to make all grids in one col.
+
+***************************************************************/
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+/* Increase vertical padding to 2.4rem. Horizonally we need less so reduced to 1.6rem.  */
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem; 
+  }
   
+/* Reduce vertical spacing on Hero section */
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+  
+/* Reduce horizontal space in the Hero section */
+  .hero {
+    padding: 0 3.2rem;
+  }
+/* Increase size of images on Hero section */
+  .hero-img {
+    width: 80%;
+  }
+
+  /* Reduce size of logo on As Featured In section */
+.logos img {
+  height: 1.2rem;
+}
+
+/* Move the second child of the container element. The number 2 is the order of the child in the container element, make it the first row */
+.step-img-box:nth-child(2) {
+  grid-row: 1;
+}
+/* Move 6th child up to row 5 */
+.step-img-box:nth-child(6) {
+  grid-row: 5;
+}
+
+/* Move the step images down vertically without affecting the elements around it */
+.step-img-box {
+  transform: translateY(2.4rem);
+}
+
+/* Use the power of CSS Grid to re-layout from 2 to 1 column. */
+.testimonials {
+  grid-template-columns: 1fr;
+}
+
+/* Re-layout Gallery to have 4 cols, 3 rows or 4 by 3. Reduce the gap to 12px. */
+.gallery {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+/* Re-layout grid to have 1 col. */
+.cta {
+  grid-template-columns: 1fr;
+}
+/* Reudce spacing around content - 3.2rem on all four sides. */
+.cta-text-box {
+  padding: 3.2rem;
+}
+
+/* Give image a hight so we can see it in the UI and layout so it appears before the form. */
+.cta-img-box {
+  height: 32rem;
+  grid-row: 1;
+}
+
+
 }
