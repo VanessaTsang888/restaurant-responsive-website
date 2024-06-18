@@ -51,6 +51,33 @@ allLinks.forEach(function (link) {
 });
 
 ///////////////////////////////////////////////////////////
+// Sticky Navigation Bar: to start as soon as the Hero section moves out of the viewport, no longer visible.
+// Use the obs object we just declared to observe HTML element of `section-hero`
+const sectionHeroEl = document.querySelector('.section-hero');
+// We will observe the `sectionHeroEl` inside the viewport (the entire browser window) which is the root.
+// Fire off an event when the threshold is zero in the viewport.
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+    // Apply css rules rules if sticky is one of its parent elements - the body.
+    if (ent.isIntersecting === false) {
+      document.body.classList.add('sticky');
+    }
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove('sticky');
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    // Make sticky nav appear as soon as we read the end of Hero section. We've set the height to 8rem in styles.css
+    rootMargin: '-80px',
+  }
+);
+obs.observe(sectionHeroEl);
+
+///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement('div');

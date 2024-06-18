@@ -65,6 +65,26 @@
   display: none;
 }
 
+/* STICKY NAVIGATION: apply these rules if sticky is one of its parent elements - the body. */
+/* Needs to stay at the top of page. Use height, padding to make nav smaller. */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  /* Horizonal nothing, vertical 1.2rem, spread only 3.2rem, black 1% */
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
 /* Style both the main nav link and the nav cta classes. Allways use px for 'border-radius' as don't want this to change.  */
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited {
