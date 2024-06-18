@@ -120,8 +120,10 @@ Instead, 1rem = 1em = 16px. */
   }
 
   /* MOBILE NAVIGATION */
+  /* Ensure focus state always stays on top of navigation - the white background by using z-index property */
   .btn-mobile-nav {
     display: block;
+    z-index: 9999;
   }
   /* Use transition property and the translateX func to create animation: 
   Move whole nav to the right - horizontally hence we use the x-axis. 
@@ -135,7 +137,7 @@ Instead, 1rem = 1em = 16px. */
     height: 100vh;
     /* Use translate func to move nav to the right */
     transform: translateX(100%);
-/* value for transition prop: which property we want to animate, the duration, then the type of the animation  */
+    /* value for transition prop: which property we want to animate, the duration, then the type of the animation  */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,7 +208,8 @@ Instead, 1rem = 1em = 16px. */
     grid-template-columns: repeat(6, 1fr);
   }
   /* For these 2 classes, span over 3 cols */
-  .logo-col, .address-col {
+  .logo-col,
+  .address-col {
     grid-column: span 3;
   }
   /* layout the last 2 cols above the first 2 cols. */
@@ -237,70 +240,68 @@ to make all grids in one col.
   .grid--4-cols {
     grid-template-columns: 1fr;
   }
-/* Increase vertical padding to 2.4rem. Horizonally we need less so reduced to 1.6rem.  */
+  /* Increase vertical padding to 2.4rem. Horizonally we need less so reduced to 1.6rem.  */
   .btn,
   .btn:link,
   .btn:visited {
-    padding: 2.4rem 1.6rem; 
+    padding: 2.4rem 1.6rem;
   }
-  
-/* Reduce vertical spacing on Hero section */
+
+  /* Reduce vertical spacing on Hero section */
   .section-hero {
     padding: 2.4rem 0 6.4rem 0;
   }
-  
-/* Reduce horizontal space in the Hero section */
+
+  /* Reduce horizontal space in the Hero section */
   .hero {
     padding: 0 3.2rem;
   }
-/* Increase size of images on Hero section */
+  /* Increase size of images on Hero section */
   .hero-img {
     width: 80%;
   }
 
   /* Reduce size of logo on As Featured In section */
-.logos img {
-  height: 1.2rem;
-}
+  .logos img {
+    height: 1.2rem;
+  }
 
-/* Move the second child of the container element. The number 2 is the order of the child in the container element, make it the first row */
-.step-img-box:nth-child(2) {
-  grid-row: 1;
-}
-/* Move 6th child up to row 5 */
-.step-img-box:nth-child(6) {
-  grid-row: 5;
-}
+  /* Move the second child of the container element. The number 2 is the order of the child in the container element, make it the first row */
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+  /* Move 6th child up to row 5 */
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
 
-/* Move the step images down vertically without affecting the elements around it */
-.step-img-box {
-  transform: translateY(2.4rem);
-}
+  /* Move the step images down vertically without affecting the elements around it */
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
 
-/* Use the power of CSS Grid to re-layout from 2 to 1 column. */
-.testimonials {
-  grid-template-columns: 1fr;
-}
+  /* Use the power of CSS Grid to re-layout from 2 to 1 column. */
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
 
-/* Re-layout Gallery to have 4 cols, 3 rows or 4 by 3. Reduce the gap to 12px. */
-.gallery {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
-}
-/* Re-layout grid to have 1 col. */
-.cta {
-  grid-template-columns: 1fr;
-}
-/* Reudce spacing around content - 3.2rem on all four sides. */
-.cta-text-box {
-  padding: 3.2rem;
-}
+  /* Re-layout Gallery to have 4 cols, 3 rows or 4 by 3. Reduce the gap to 12px. */
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+  /* Re-layout grid to have 1 col. */
+  .cta {
+    grid-template-columns: 1fr;
+  }
+  /* Reudce spacing around content - 3.2rem on all four sides. */
+  .cta-text-box {
+    padding: 3.2rem;
+  }
 
-/* Give image a hight so we can see it in the UI and layout so it appears before the form. */
-.cta-img-box {
-  height: 32rem;
-  grid-row: 1;
-}
-
-
+  /* Give image a hight so we can see it in the UI and layout so it appears before the form. */
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
 }

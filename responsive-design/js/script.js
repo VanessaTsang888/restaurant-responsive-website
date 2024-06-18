@@ -1,31 +1,43 @@
 // Test to see if this file is connected-up as expected.
 console.log('Hello world!');
 
-// Use JavaScript to keep the date/year updated.
-// Use Date() func to generate the current date. 
-const yearEl = document.querySelector(".year");
+///////////////////////////////////////////////////////////
+// Set current year:
+// Use Date() func to generate the current date.
+const yearEl = document.querySelector('.year');
 const currentYear = new Date().getFullYear();
-console.log(currentYear)
 yearEl.textContent = currentYear;
 
+///////////////////////////////////////////////////////////
+// Make mobile navigateion work
+
+const btnNavEl = document.querySelector('.btn-mobile-nav');
+const headerEl = document.querySelector('.header');
+
+// When user tap on mobile navigation icon, then the code in the body will execute.
+// toggle will look for `nav-open` class and if already there, it will remove it.
+// Otherwise, it will add it.
+btnNavEl.addEventListener('click', function () {
+  headerEl.classList.toggle('nav-open');
+});
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
-  var flex = document.createElement("div");
-  flex.style.display = "flex";
-  flex.style.flexDirection = "column";
-  flex.style.rowGap = "1px";
+  var flex = document.createElement('div');
+  flex.style.display = 'flex';
+  flex.style.flexDirection = 'column';
+  flex.style.rowGap = '1px';
 
-  flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement('div'));
+  flex.appendChild(document.createElement('div'));
 
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
   console.log(isSupported);
 
-  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+  if (!isSupported) document.body.classList.add('no-flexbox-gap');
 }
 checkFlexGap();
 
