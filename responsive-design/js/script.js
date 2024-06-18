@@ -22,6 +22,35 @@ btnNavEl.addEventListener('click', function () {
 });
 
 ///////////////////////////////////////////////////////////
+// Smooth scrolling animation
+// Only select the anchor elements with href attribute.
+const allLinks = document.querySelectorAll('a:link');
+// Only select the anchor elements with href attribute. Prevent browser default behaviour.
+allLinks.forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+
+    // Scroll back to top - logo. If the value for href attribute is anchor, then scroll to top of page.
+    if (href === '#')
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    // Scroll to other links
+    if (href !== '#' && href.startsWith('#')) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Close mobile nav. Is the class of `main-nav-link` inside of the class list of the link?
+    // If so, remove the `nav-open` from the header element.
+    if (link.classList.contains('main-nav-link'))
+      headerEl.classList.toggle('nav-open');
+  });
+});
+
+///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement('div');
