@@ -53,6 +53,10 @@ Check that the text colour meets the 'colour constrast ratio' on the digital acc
 
 Click the 'GoLive' feature located on the botton-right of your VSCode IDE. This will run the website application in Google Chrome browser. Then you will be able to navigate around the website as expected.
 
-## Hosting - Live On The World Wide Web
+## Hosting - Go Live
 
-Once I have completed my Omnfood website, I will host it on the World Wide Web (www.) and post the live URL on here. You will be able to use the URL to navigate around the whole website and use the contact details to leave me with your feedback and comments if you have any to share with me.
+My [Omnifood responsive website](https://omnifood-vanessa-tsang.netlify.app/) is now deployed on to a live server and hosted for free on [Netlify](https://app.netlify.com/). The URL is: https://omnifood-vanessa-tsang.netlify.app/.
+
+Feel free to test out my Omnifood responsive website.
+
+This website is responsive meaning it works on all major browsers and all major devices including desktop machines, smartphones and tablets. This website also adhere to some of the digital accessibility guidelines including colour contrast ratio requirements as stated on the [WCAG 2.1 Guidelines - Success Criterion 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG/#contrast-minimum). I have been using the [Color Contrast Ratio Calculator](https://www.msfw.com/Services/ContrastRatioCalculator) to ensure the colours on my [Omnifood website](https://omnifood-vanessa-tsang.netlify.app/) comply to that guideline.
