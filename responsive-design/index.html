@@ -101,11 +101,20 @@ HTML5 elements:
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="img/hero.png"
-              class="hero-img"
-              alt="Women enjoying food, meals in storage container, and food bowls on a table"
-            />
+            <!-- The browser will decide which image it can render -->
+            <picture>
+              <source srcset="img/hero.webp"
+              type="image/webp" />
+              <!-- The image that most browsers should be able to render -->
+              <source srcset="img/hero-min.png"
+              type="image/png" />
+
+              <img
+                src="img/hero-min.png"
+                class="hero-img"
+                alt="Women enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </section>
 
