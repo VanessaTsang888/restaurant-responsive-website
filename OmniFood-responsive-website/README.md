@@ -2,13 +2,15 @@
 
 Around my full time job (and other software engineering online training courses), I am developing the [Omnifood responsive website](https://omnifood.dev/) which is designed and built by Jonas Schmedtmann because this website application is fully responsive and uses some of the **_latest website technology languages_** including HTML5, CSS3 and JavaScript ES6. Also, this application includes some organic search engine optimisation techniques and digital accessibility features. All of this is very much inline with my full time job as Software Engineer which the is focuse is on frontend software and website Development.
 
-The Omnifood website is a fictional AI-based meal subscription service. Website utilizes a sticky navigation, hamburger menu, toggle switch, animations triggered by IntersectionObserver, and smooth scrolling.
+The Omnifood website is fictional AI-based meal subscription service. Website utilizes a sticky navigation, hamburger menu, toggle switch, animations triggered by IntersectionObserver, and smooth scrolling.
 
 The Omnifood company provides an online healthy food ording service via a fully responsive website application which is a popular service since many of us are very busy working full time making cooking declious healthy meals difficult to keep on top of. I am one of those people and this is one reason why I am so passionate about building this Ominifood responsive web application using some of the latest website development technologies.
 
 This responsive website application is the major project within the [Build Real-World Websites with HTML and CSS](https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/) online training course on the Udemy platform.
 
 ## Key Concepts and Features
+
+Having created the single page website from scratch, I learned how to create and implement features that I'm likely to use in my future websites over and over again. Here are some of the key features and topics that I worked on:
 
 **Design**
 
@@ -17,21 +19,14 @@ This responsive website application is the major project within the [Build Real-
 
 **General**
 
-Summary:
-
-- CSS3 Media Queries.
-- modern flexbox and CSS Grid.
-- Planning, sketching, designing, building, testing, optimizing, and launching a responsive website.
-
-Details:
-
-- Hamburger menu that appears on tablet-sized screens or smaller
-- Sticky header that _sticks_ after user scrolls past the hero section
-- Smooth scrolling active whenever any navigation links are clicked
-- Subtle animations that trigger when a certain viewport rule is met (using `IntersectionObserver`)
-- Added cross-browser support for certain CSS styles using prefixes `-webkit`
-- Used Lighthouse Chrome extension and executed Performance testing to generate a report on the perforance of website.
-- Functional form with validation and a message displayed after submission by user
+1. Hamburger menu that appears on tablet-sized screens and smaller
+2. Smooth scrolling whenever any navigation (header and footer) are clicked
+3. Subtle animations that trigger when a certain viewport rule is met (e.g. element is in viewport or element is not in viewport) using IntersectionObserver
+4. Fully responsive thanks to media queries ✨
+5. Utilized grid, flexbox and absolute positioning.
+6. Functional form 💌
+7. Added cross-broswer support for certain CSS styles using prefixes (-webkit, -moz-, -o-, -ms-)
+8. Tested website on different browsers & had to style the select input so that it appears the same on most major browsers and devices
 
 ## The Requirements
 
