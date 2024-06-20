@@ -30,4 +30,6 @@ and then I had Deployed my project again using the Netlify website.
 
 Within the Netlify website -> Forms menu, scroll down to the 'Active forms' section. Here we can click on my test submission that I just made using my own details.
 
+This form can only take up to 100 submissions per month. After that I will need to pay for the paid plan.
+
 We cannot use this form submission to submit passwords unless I upgrade my Netlify subscription.
