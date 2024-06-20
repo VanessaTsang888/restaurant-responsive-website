@@ -39,7 +39,7 @@ I already have some experience in website design and development from previous f
 
 This course is also a nice way to reinforce some of the website development concepts I already have experience in which is important for me since I know that information technology develops and moves-on on quickily and part of my job is to keep up with these developments in tech.
 
-This course comes with some very [usful resource](https://codingheroes.io/resources/) and these are also helpful for me to stay on top of the ongoing changes within website development which is needed for me to continue to excel in my full time job as Software Engineer/Developer.
+This course comes with some very [useful resource](https://codingheroes.io/resources/) and these are also helpful for me to stay on top of the ongoing changes within website development which is needed for me to continue to excel in my full time job as Software Engineer/Developer.
 
 ### Tools
 
