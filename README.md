@@ -67,3 +67,7 @@ My [Omnifood responsive website](https://omnifood-vanessa-tsang.netlify.app/) is
 Feel free to test out my Omnifood responsive website.
 
 This website is responsive meaning it works on all major browsers and all major devices including desktop machines, smartphones and tablets. This website also adhere to some of the digital accessibility guidelines including colour contrast ratio requirements as stated on the [WCAG 2.1 Guidelines - Success Criterion 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG/#contrast-minimum). I have been using the [Color Contrast Ratio Calculator](https://www.msfw.com/Services/ContrastRatioCalculator) to ensure the colours on my [Omnifood website](https://omnifood-vanessa-tsang.netlify.app/) comply to that guideline.
+
+## The Repository
+
+The repository (the code base) of my Omnifood website desgin and development project has been pushed to my [GitHub](https://github.com/VanessaTsang888/OmniFood-responsive-website/tree/dev-branch/OmniFood-responsive-website). You may use git to clone down this my repo and run the website application locally, test in the user interface and analyse the my code in more detail.
