@@ -1,5 +1,17 @@
-// Test to see if this file is connected-up as expected.
-console.log('Hello world!');
+// Form validation:
+function validate() {
+  const mail = document.getElementById('email').value;
+
+  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+
+  if (regx.email(mail)) {
+    alert('Thank you. Your email address is valid.');
+    return true;
+  } else {
+    alert('Invalid email address. Try again.');
+    return false;
+  }
+}
 
 ///////////////////////////////////////////////////////////
 // Set current year:
