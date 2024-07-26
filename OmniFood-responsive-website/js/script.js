@@ -1,5 +1,5 @@
-// Form validation - email:
-
+// Form validation - email.
+// The id attribut in the form element is `signup-form`. The type attribute within button element is `submit`.
 document.addEventListener('DOMContentLoaded', function () {
   document
     .getElementById('signup-form')
