@@ -1,10 +1,21 @@
-// Form validation:
-function validate() {
-  const mail = document.getElementById('email').value;
+// Form validation - email:
 
-  const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+document.addEventListener('DOMContentLoaded', function () {
+  document
+    .getElementById('signup-form')
+    .addEventListener('submit', function (event) {
+      if (!validateEmail()) {
+        event.preventDefault(); // Prevent form submission if the email is invalid.
+      }
+    });
+});
 
-  if (regx.email(mail)) {
+// Ensure the email input is properly selected.
+function validateEmail() {
+  const email = document.getElementById('email').value;
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (regex.test(email)) {
     alert('Thank you. Your email address is valid.');
     return true;
   } else {
