@@ -82,7 +82,6 @@ const sectionHeroEl = document.querySelector('.section-hero');
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
     // Apply css rules rules if sticky is one of its parent elements - the body.
     if (ent.isIntersecting === false) {
       document.body.classList.add('sticky');
@@ -114,7 +113,6 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
   if (!isSupported) document.body.classList.add('no-flexbox-gap');
 }
